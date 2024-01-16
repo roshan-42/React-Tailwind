@@ -31,7 +31,8 @@ function Header() {
             onClick={() => {
               setShowMenu();
             }}
-            className="md:flex lg:hidden xl:hidden 2xl:hidden"
+            className="hidden md:flex lg:hidden xl:hidden 2xl:hidden"
+            n
           >
             Menu
           </button>
@@ -45,7 +46,9 @@ function Header() {
             );
           })}
         </div>
-        <div className="md:flex flex-col lg:hidden 2xl:hidden xl:hidden">
+        <div
+          className={`hidden md:flex flex-col lg:hidden 2xl:hidden xl:hidden ${showMenu}`}
+        >
           {menuItems.map((item, index) => {
             return (
               <li className="list-none mx-5">
